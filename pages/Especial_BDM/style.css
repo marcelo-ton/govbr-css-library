@@ -1,0 +1,293 @@
+:root {
+  --color-ink: #071d41;
+  --color-indigo: #4b0082;
+  --color-primary: #0c326f;
+  --color-primary-dark: #092754;
+  --color-border: #b8c4ce;
+  --color-bg-hero: #f4f4f4;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  font-family: 'Rawline', 'Segoe UI', system-ui, sans-serif;
+  color: var(--color-ink);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Hero */
+
+.bdm-hero {
+  background: var(--color-bg-hero);
+  padding: 2rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.bdm-hero__eyebrow {
+  font-size: 1.75rem;
+  font-weight: 200;
+  color: #333;
+  margin: 0;
+}
+
+.bdm-hero__title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-indigo);
+  line-height: 1.05;
+  margin: .25rem 0 1.5rem;
+}
+
+.bdm-hero__lead,
+.bdm-hero__callout {
+  font-size: 1.15rem;
+  line-height: 1.4;
+  margin: 0 0 1rem;
+}
+
+.bdm-hero__callout {
+  font-style: italic;
+  margin-bottom: 1.5rem;
+}
+
+.bdm-hero__actions {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .75rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+}
+
+.btn--outline {
+  background: #fff;
+  border: 1px solid var(--color-border);
+  color: var(--color-primary);
+}
+
+.btn--outline:hover {
+  background: #eef2f6;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: 1px solid var(--color-primary);
+}
+
+.btn--primary:hover {
+  background: var(--color-primary-dark);
+}
+
+.bdm-hero__media {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bdm-hero__ring {
+  position: absolute;
+  width: 115%;
+  height: 115%;
+  z-index: 0;
+}
+
+.bdm-hero__media img {
+  position: relative;
+  width: 75%;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+/* About */
+
+.bdm-about {
+  background: #fff;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+}
+
+.bdm-about p {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Programas anteriores */
+
+.bdm-previous {
+  padding: 2.5rem 1.25rem;
+}
+
+.bdm-previous__title {
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.75rem;
+  margin: 0 0 2rem;
+}
+
+.bdm-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto 2rem;
+}
+
+.bdm-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.bdm-card__link {
+  display: block;
+}
+
+.bdm-card__image {
+  width: 100%;
+  height: auto;
+}
+
+.bdm-card__share {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, .85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bdm-card__share svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--color-primary);
+}
+
+.bdm-card__caption {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.bdm-previous__all {
+  display: flex;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+/* Share */
+
+.bdm-share {
+  padding: 1.5rem 1.25rem 3rem;
+  text-align: center;
+}
+
+.bdm-share__label {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--color-indigo);
+  margin-right: .5rem;
+}
+
+.bdm-share__icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: currentColor;
+}
+
+.bdm-share a {
+  display: inline-flex;
+  padding: 0 .3rem;
+  color: var(--color-indigo);
+  vertical-align: middle;
+}
+
+.bdm-share svg {
+  width: 1.05rem;
+  height: 1.05rem;
+  fill: currentColor;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Tablet and up */
+
+@media (min-width: 768px) {
+  .bdm-hero {
+    flex-direction: row;
+    align-items: center;
+    padding: 4rem 3rem;
+    gap: 3rem;
+  }
+
+  .bdm-hero__text,
+  .bdm-hero__media {
+    flex: 1;
+  }
+
+  .bdm-hero__title {
+    font-size: 3.5rem;
+  }
+
+  .bdm-hero__actions {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bdm-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
